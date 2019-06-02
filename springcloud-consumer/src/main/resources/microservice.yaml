@@ -1,0 +1,26 @@
+servicecomb-config-order: -1
+
+APPLICATION_ID: spring-cloud-application
+
+service_description:
+  name: ${spring.application.name}
+  version: 1.0.0
+
+cse:
+  service:
+
+    registry:
+      address: http://127.0.0.1:30100
+      instance:
+        watch: false
+  config:
+    client:
+      serverUri: http://127.0.0.1:30103
+      refreshMode: 1
+      refresh_interval: 15000
+  rest:
+    address: 0.0.0.0:${server.port}
+
+addressResolver:
+  searchDomains: default.svc.cluster.local,svc.cluster.local,cluster.local
+  ndots: 1

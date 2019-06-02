@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: helloprovider
+
+server:
+  port: 7333

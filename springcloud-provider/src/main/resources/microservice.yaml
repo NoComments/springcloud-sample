@@ -1,0 +1,25 @@
+servicecomb-config-order: -1
+
+APPLICATION_ID: spring-cloud-application
+
+service_description:
+  name: ${spring.application.name}
+  version: 1.0.0
+
+cse:
+  service:
+
+    registry:
+      address: http://192.166.15.83:30100
+      instance:
+        watch: false
+  rest:
+    address: 0.0.0.0:${server.port}
+  cse:
+    credentials:
+      accessKey: XUHY5XXNC7BUCKZPE7B2
+      secretKey: lEH0Jd5cga2GlWr4cuIAQdoJzmY2souzGyfaTYFG
+      project: wqyz_project
+addressResolver:
+  searchDomains: default.svc.cluster.local,svc.cluster.local,cluster.local
+  ndots: 1
